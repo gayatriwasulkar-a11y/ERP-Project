@@ -1,22 +1,25 @@
+/* BODY */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0436a3, #0436a3);
-  margin-bottom: 50px;
+  min-height: 100vh;
 }
 
-/* MAIN */
+/* MAIN CONTAINER */
 .container {
   display: flex;
-  height: 100%;
+  height: 160vh;
+  color: white;
 }
 
 /* LEFT SIDE */
 .left {
   flex: 1;
-  color: rgb(232, 232, 240);
-  padding: 200px 30px; 
-  margin-left: 120px;
+  padding: 120px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* LOGO */
@@ -24,47 +27,49 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 10px;
 }
 
 .logo-box {
   background: white;
   color: #1e3a8a;
-  padding: 15px;
-  border-radius: 12px;
-  font-size: 22px;
+  padding: 18px;
+  border-radius: 15px;
+  font-size: 26px;
 }
 
-/* TEXT SIZE FIX */
+/* TEXT */
 .logo h1 {
-  font-size: 26px;
+  font-size: 30px;
   margin: 0;
+  line-height: 1.2;
 }
 
 .tagline {
-  font-size: 14px;
-  margin-top: 3px;
+  font-size: 16px;
   color: #c7d2fe;
+  margin-top: 5px;
 }
 
 /* ERP SECTION */
 .erp-section {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .erp-section h2 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .desc {
   max-width: 500px;
   font-size: 16px;
+  color: #e0e7ff;
 }
+
 
 /* FEATURE CARD */
 .feature-card-single {
-  margin-top: 15px;
+  margin-top: 25px;
   background: #03349f;
   padding: 15px;
   border-radius: 12px;
@@ -72,8 +77,10 @@ body {
 
 .feature-card-single ul {
   list-style: none;
+  overflow-x: auto;
   padding: 0;
   margin: 0;
+  color: rgba(255, 255, 255, 0.851);
 }
 
 .feature-card-single li {
@@ -85,7 +92,7 @@ body {
 /* FOOTER LEFT */
 .footer-left {
   margin-top: 30px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* RIGHT SIDE */
@@ -95,16 +102,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-right: 60px; 
 }
 
 /* LOGIN CARD */
 .login-card {
-  width: 420px;
+  width: 450px;
   background: #f1f5f9;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  margin-right: 100px;
+  margin-left: 60px;
+  margin-top: 50px;
 }
 
 /* WELCOME */
@@ -120,26 +129,56 @@ body {
   margin-top: 5px;
   margin-bottom: 15px;
   color: #636f81;
-  font-size: 14px;
+  font-size: 17px;
 }
 
-/* TOP ERROR BOX */
+/* 🔴 Full Error Card */
 .top-error {
-  background: #fee2e2;
-  color: #991b1b;
-  padding: 12px;
-  border-radius: 10px;
+  background: #fff5f5;
+  border: 1px solid #f5c2c2;   
+  border-radius: 8px;
+  padding: 15px;
   margin-bottom: 15px;
+}
+
+.error-title {
+  color: #b30000;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Light text */
+.error-subtext {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.demo-box {
+  background: #ffe0e0;  
+  border: 1px solid #ffb3b3;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Demo title */
+.demo-title {
+  font-weight: 600;
   font-size: 13px;
+  color: #800000;
+  margin-bottom: 5px;
 }
 
-.top-error p {
-  margin: 5px 0;
-}
-
-.top-error ul {
-  margin: 5px 0;
+/* Email list */
+.demo-box ul {
   padding-left: 18px;
+  margin: 0;
+}
+
+.demo-box li {
+  font-size: 12px;
+  color: #333;
 }
 
 /* LABEL */
@@ -201,29 +240,28 @@ label {
   background: #1e40af;
 }
 
-/* LABEL + ERROR */
-.label-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-}
-
-.error-inline {
-  color: rgb(236, 234, 234);
-  font-size: 12px;
-  background-color: black;
-  align-items: center;
-}
-
-.error {
-  color: #facc15; 
-  font-size: 13px;
-  margin-top: -10px;
+.error-box {
+  background: #181816;
+  border: 1px solid #ffeeba;
+  padding: 8px;
+  border-radius: 5px;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  font-size: 13px;
+  color: white;
 }
+
+/* Text */
+.demo-text {
+  line-height: 1.3;
+  background: #e0e5f0f9;
+  border: 1px solid #8391e3;   
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #3f6fd8;
+}
+
 
 /* DEMO */
 .demo-section {
@@ -233,6 +271,7 @@ label {
 
 .cred {
   background: white;
+  color: #2c2828;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -244,19 +283,42 @@ label {
   margin-top: 20px;
   color: white;
   font-size: 14px;
-  margin-right: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-left: 60px;
 } 
 
-/* ERROR BOX (ADD ONLY) */
-.error-box {
-  background: #fef9c3;       
-  color: #92400e;            
-  font-size: 13px;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: -10px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .left {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .erp-section {
+    text-align: center;
+  }
+
+  .login-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .footer {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .tagline {
+    font-size: 18px;      
+  }
 }
