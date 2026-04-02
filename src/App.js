@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from "./App.jsx";  
+import Mainapp from "./mainapp.js";  
 import Dashboard from "./pages/dashboard.jsx";  
 
-function MainApp() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Mainapp />} />
       
         <Route path="/dashboard" element={<Dashboard />} />
      
@@ -18,4 +18,4 @@ function MainApp() {
   );
 }
 
-export default MainApp;
+export default App;
